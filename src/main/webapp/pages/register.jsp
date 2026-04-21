@@ -13,18 +13,38 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="card">
-        <h2>Register</h2>
+<div class="main">
+    <%
+        String errorMessage = (String) request.getAttribute("error");
+        if(errorMessage == null){
+            errorMessage = "";
+        }
+    %>
+    <%= errorMessage %>
 
-        <form action="register" method="post">
-            <input type="text" name="name" placeholder="Full Name"><br><br>
-            <input type="text" name="email" placeholder="Email"><br><br>
-            <input type="text" name="phone" placeholder="Phone"><br><br>
-            <input type="password" name="password" placeholder="Password"><br><br>
+    <div class="navbar">
+        <div>SafeNepal</div>
+        <div>
+            <a href="dashboard">Dashboard</a>
+            <a href="reportForm.jsp">Report</a>
+            <a href="alerts.jsp">Alerts</a>
+            <a href="logout">Logout</a>
+        </div>
+    </div>
 
-            <button class="btn">Register</button>
-        </form>
+    <div class="container">
+        <div class="card">
+            <h2>Register</h2>
+
+            <form action="register" method="post">
+                <input type="text" name="fullname" placeholder="Full Name"><br><br>
+                <input type="text" name="email" placeholder="Email"><br><br>
+                <input type="text" name="phone" placeholder="Phone"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+
+                <button class="btn">Register</button>
+            </form>
+        </div>
     </div>
 </div>
 </body>
