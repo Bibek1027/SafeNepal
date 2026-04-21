@@ -9,8 +9,17 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div class="navbar">
+    <div>SafeNepal</div>
+    <div>
+        <a href="dashboard">Dashboard</a>
+        <a href="reportForm.jsp">Report</a>
+        <a href="alerts.jsp">Alerts</a>
+        <a href="logout">Logout</a>
+    </div>
+</div>
 </body>
 </html>

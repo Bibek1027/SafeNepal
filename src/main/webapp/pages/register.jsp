@@ -37,7 +37,7 @@
             <h2>Register</h2>
 
             <form action="register" method="post">
-                <input type="text" name="fullname" placeholder="name"><br><br>
+                <input type="text" name="fullname" placeholder="Full Name"><br><br>
                 <input type="text" name="email" placeholder="Email"><br><br>
                 <input type="text" name="phone" placeholder="Phone"><br><br>
                 <input type="password" name="password" placeholder="Password"><br><br>
@@ -47,6 +47,5 @@
         </div>
     </div>
 </div>
-
 </body>
 </html>
