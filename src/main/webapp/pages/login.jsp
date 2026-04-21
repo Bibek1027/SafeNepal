@@ -23,6 +23,8 @@
     </div>
 </div>
 
+<form method="post" action="login"">
+
 <div class="container">
     <div class="card">
         <h2>Login</h2>
@@ -36,5 +38,7 @@
         <p>Don't have account? <a href="register.jsp">Register</a></p>
     </div>
 </div>
+</form>
+
 </body>
 </html>

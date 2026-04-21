@@ -13,29 +13,40 @@
 </head>
 <body>
 
-<div class="navbar">
-    <div>SafeNepal</div>
-    <div>
-        <a href="dashboard">Dashboard</a>
-        <a href="reportForm.jsp">Report</a>
-        <a href="alerts.jsp">Alerts</a>
-        <a href="logout">Logout</a>
+<div class="main">
+    <%
+        String errorMessage = (String) request.getAttribute("error");
+        if(errorMessage == null){
+            errorMessage = "";
+        }
+    %>
+    <%= errorMessage %>
+
+    <div class="navbar">
+        <div>SafeNepal</div>
+        <div>
+            <a href="dashboard">Dashboard</a>
+            <a href="reportForm.jsp">Report</a>
+            <a href="alerts.jsp">Alerts</a>
+            <a href="logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>Register</h2>
+
+            <form action="register" method="post">
+                <input type="text" name="fullname" placeholder="name"><br><br>
+                <input type="text" name="email" placeholder="Email"><br><br>
+                <input type="text" name="phone" placeholder="Phone"><br><br>
+                <input type="password" name="password" placeholder="Password"><br><br>
+
+                <button class="btn">Register</button>
+            </form>
+        </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="card">
-        <h2>Register</h2>
-
-        <form action="register" method="post">
-            <input type="text" name="name" placeholder="Full Name"><br><br>
-            <input type="text" name="email" placeholder="Email"><br><br>
-            <input type="text" name="phone" placeholder="Phone"><br><br>
-            <input type="password" name="password" placeholder="Password"><br><br>
-
-            <button class="btn">Register</button>
-        </form>
-    </div>
-</div>
 </body>
 </html>
